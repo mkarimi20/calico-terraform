@@ -1,1 +1,1 @@
-policy_name = "globalnetworkpolicy.yaml"
+icoms-deny-policy = "icoms-deny-policy.yaml"

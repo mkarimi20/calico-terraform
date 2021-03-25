@@ -1,3 +1,3 @@
-variable "policy_name" {
+variable "icoms-deny-policy" {
 
 }
