@@ -1,1 +1,1 @@
-policy_name = "globalnetworkpolicy"
+policy_name = "globalnetworkpolicy.yaml"
