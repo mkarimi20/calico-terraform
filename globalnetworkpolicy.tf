@@ -1,7 +1,7 @@
-resource "null_resource" "calicoctl_install" {
+resource "null_resource" "deploy_policy" {
 
   provisioner "local-exec" {
       
-    command = "calicoctl apply -f ${var.policy_name}"
+    command = "sh ./calicoctl_installer.sh"
   }
 }
