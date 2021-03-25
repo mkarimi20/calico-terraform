@@ -1,7 +1,15 @@
-resource "null_resource" "deploy_policy" {
-
-  provisioner "local-exec" {
-      
-    command = "sh ./calicoctl_installer.sh"
-  }
-}
+apiVersion: projectcalico.org/v3
+kind: NetworkPolicy
+metadata:
+  name: allow-tcp-6379
+  namespace: production
+spec:
+  selector: color == 'red'
+  ingress:
+  - action: Allow
+    protocol: TCP
+    source:
+      selector: color == 'blue'
+    destination:
+      ports:
+        - 6379
